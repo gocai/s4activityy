@@ -35,12 +35,12 @@
                     // twerk the mouse
                     this.tweens.add({
                         targets: this.meep,
-                        angle: {from: -5, to: 0},
-                        duration: 250
+                        angle: {from: -360, to: 0},
+                        duration: 1000
                     });
 
                     // spawn a dropping
-                    let dropping = this.add.circle(x+10,y+10,2).setFillStyle(0,1);
+                    let dropping = this.add.circle(x+10,y+10,2).setFillStyle(0x9F2B68,1);
                     dropping.setDepth(-1); // below the mouse
 
                     // shoot away quickly
@@ -48,7 +48,7 @@
                         targets: dropping,
                         x: '+=' + (10*Math.random()),
                         y: '+=' + (10*Math.random()),
-                        duration: 250,
+                        duration: 1,
                         ease: 'Cubic.out'
                     });
 
@@ -68,7 +68,7 @@
             width: 640,
             height: 520,
             scene: Demo,
-            backgroundColor: 0xadd8e6,
+            backgroundColor: 0x023020,
             parent: 'here'
         });
     </script>
